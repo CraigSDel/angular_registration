@@ -40,8 +40,8 @@ export class QuestionService {
         order: 5
       }),
       new TextboxQuestion({
-        key: 'comments',
-        label: 'Comments',
+        key: 'comment',
+        label: 'Comment',
         required: true,
         order: 6
       })

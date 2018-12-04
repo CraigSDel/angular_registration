@@ -6,14 +6,7 @@ export class QuestionBase<T> {
   order: number;
   controlType: string;
 
-  constructor(options: {
-    value?: T,
-    key?: string,
-    label?: string,
-    required?: boolean,
-    order?: number,
-    controlType?: string
-  } = {}) {
+  constructor(options: { value?: T, key?: string, label?: string, required?: boolean, order?: number, controlType?: string } = {}) {
     this.value = options.value;
     this.key = options.key || '';
     this.label = options.label || '';
