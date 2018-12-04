@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {QuestionControlService} from './service/question-control.service';
-import {QuestionService} from './service/question.service';
 
 @Component({
   selector: 'app-root',

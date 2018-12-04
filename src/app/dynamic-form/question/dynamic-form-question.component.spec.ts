@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { DynamicFormQuestionComponent } from './dynamic-form-question.component';
+import {DynamicFormQuestionComponent} from './dynamic-form-question.component';
 
 describe('DynamicFormQuestionComponent', () => {
   let component: DynamicFormQuestionComponent;
