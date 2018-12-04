@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
-import {TextboxQuestion} from '../model/question-textbox';
-import {QuestionBase} from '../model/question-base';
+import {QuestionBase} from '../model/registrationQuestion/question-base';
+import {TextboxQuestion} from '../model/registrationQuestion/question-textbox';
 
 @Injectable({
   providedIn: 'root'
