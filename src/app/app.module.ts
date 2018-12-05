@@ -3,17 +3,19 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import {DynamicFormComponent} from './dynamic-form/component/dynamic-form.component';
-import {DynamicFormQuestionComponent} from './dynamic-form/question/dynamic-form-question.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {RegistrationComponent} from './components/registration/registration.component';
+import {PageOneComponent} from './components/registration/pages/page-one/page-one.component';
+import {PageTwoComponent} from './components/registration/pages/page-two/page-two.component';
+import {PageThreeComponent} from './components/registration/pages/page-three/page-three.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DynamicFormComponent,
-    DynamicFormQuestionComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    PageOneComponent,
+    PageTwoComponent,
+    PageThreeComponent
   ],
   imports: [
     BrowserModule,
