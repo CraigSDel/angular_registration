@@ -1,3 +1,5 @@
-<label for="lastName"></label>
-<input id="lastName" name="lastName" type="text">
-<button>Save</button>
+<!--<label for="lastName"></label>-->
+<!--<input id="lastName" name="lastName" type="text">-->
+<!--<button>Save</button>-->
+<div>Current Count: {{ count$ | async }}</div>
+<button (click)="reset()">Reset Counter</button>

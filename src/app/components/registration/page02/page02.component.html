@@ -1,3 +1,5 @@
-<label for="middleName"></label>
-<input id="middleName" name="middleName" type="text">
-<button>Next</button>
+<!--<label for="middleName"></label>-->
+<!--<input id="middleName" name="middleName" type="text">-->
+<!--<button>Next</button>-->
+<div>Current Count: {{ count$ | async }}</div>
+<button (click)="decrement()">Decrement</button>

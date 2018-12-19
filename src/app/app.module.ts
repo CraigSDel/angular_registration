@@ -8,6 +8,8 @@ import {RegistrationComponent} from './components/registration/registration.comp
 import {Page01Component} from './components/registration/page01/page01.component';
 import {Page03Component} from './components/registration/page03/page03.component';
 import {Page02Component} from './components/registration/page02/page02.component';
+import {StoreModule} from '@ngrx/store';
+import {counterReducer} from './reducer/counter.reducer';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import {Page02Component} from './components/registration/page02/page02.component
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    StoreModule.forRoot({count: counterReducer})
   ],
   providers: [],
   bootstrap: [AppComponent]
