@@ -1,7 +1,8 @@
 import {Component} from '@angular/core';
-import {Reset} from '../../../action/counter.actions';
 import {Observable} from 'rxjs';
 import {select, Store} from '@ngrx/store';
+import {User} from '../../../model/user';
+import {Page03} from '../../../action/registration.actions';
 
 @Component({
   selector: 'app-page03',
@@ -9,13 +10,15 @@ import {select, Store} from '@ngrx/store';
   styleUrls: ['./page03.component.css']
 })
 export class Page03Component {
-  count$: Observable<number>;
+  user$: Observable<User>;
+  lastName: string;
+  c;
 
-  constructor(private store: Store<{ count: number }>) {
-    this.count$ = store.pipe(select('count'));
+  constructor(private store: Store<{ user: User }>) {
+    this.user$ = store.pipe(select('user'));
   }
 
-  reset() {
-    this.store.dispatch(new Reset());
+  page03() {
+    this.store.dispatch(new Page03());
   }
 }

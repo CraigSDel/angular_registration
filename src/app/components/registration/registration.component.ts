@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {select, Store} from '@ngrx/store';
 import {Observable} from 'rxjs';
+import {User} from '../../model/user';
 
 @Component({
   selector: 'app-registration',
@@ -8,9 +9,9 @@ import {Observable} from 'rxjs';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent {
-  count$: Observable<number>;
+  user$: Observable<User>;
 
-  constructor(private store: Store<{ count: number }>) {
-    this.count$ = store.pipe(select('count'));
+  constructor(private store: Store<{ user: User }>) {
+    this.user$ = store.pipe(select('user'));
   }
 }

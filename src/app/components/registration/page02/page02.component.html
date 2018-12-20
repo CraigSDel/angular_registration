@@ -1,5 +1,4 @@
-<!--<label for="middleName"></label>-->
-<!--<input id="middleName" name="middleName" type="text">-->
-<!--<button>Next</button>-->
-<div>Current Count: {{ count$ | async }}</div>
-<button (click)="decrement()">Decrement</button>
+<div>User: {{ user$ | async }}</div>
+<label for="middleName"></label>
+<input id="middleName" name="middleName" [(ngModel)]="middleName" type="text">
+<button (click)="page02()">Next</button>

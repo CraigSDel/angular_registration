@@ -1,5 +1,4 @@
-<!--<label for="lastName"></label>-->
-<!--<input id="lastName" name="lastName" type="text">-->
-<!--<button>Save</button>-->
-<div>Current Count: {{ count$ | async }}</div>
-<button (click)="reset()">Reset Counter</button>
+<div>User: {{ user$ | async }}</div>
+<label for="lastName"></label>
+<input id="lastName" name="lastName" [(ngModel)]="lastName" type="text">
+<button (click)="page03()">Save</button>

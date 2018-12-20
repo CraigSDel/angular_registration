@@ -1,7 +1,8 @@
 import {Component} from '@angular/core';
-import {Increment} from '../../../action/counter.actions';
 import {Observable} from 'rxjs';
 import {select, Store} from '@ngrx/store';
+import {User} from '../../../model/user';
+import {Page01} from '../../../action/registration.actions';
 
 @Component({
   selector: 'app-page01',
@@ -9,17 +10,14 @@ import {select, Store} from '@ngrx/store';
   styleUrls: ['./page01.component.css']
 })
 export class Page01Component {
-  count$: Observable<number>;
+  user$: Observable<User>;
+  firstName: string;
 
-  constructor(private store: Store<{ count: number }>) {
-    this.count$ = store.pipe(select('count'));
+  constructor(private store: Store<{ user: User }>) {
+    this.user$ = store.pipe(select('user'));
   }
 
-  next() {
-    console.log('Hello there');
-  }
-
-  increment() {
-    this.store.dispatch(new Increment());
+  page01() {
+    this.store.dispatch(new Page01());
   }
 }

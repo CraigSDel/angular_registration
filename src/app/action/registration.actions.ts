@@ -1,19 +1,19 @@
 import {Action} from '@ngrx/store';
 
 export enum ActionTypes {
-  PageO1 = '[Counter Component] PageO1',
-  PageO2 = '[Counter Component] PageO2',
-  PageO3 = '[Counter Component] PageO3',
+  Page01 = '[Registration Component] Page01',
+  Page02 = '[Registration Component] Page02',
+  Page03 = '[Registration Component] Page03',
 }
 
-export class PageO1 implements Action {
-  readonly type = ActionTypes.PageO1;
+export class Page01 implements Action {
+  readonly type = ActionTypes.Page01;
 }
 
-export class PageO2 implements Action {
-  readonly type = ActionTypes.PageO2;
+export class Page02 implements Action {
+  readonly type = ActionTypes.Page02;
 }
 
-export class PageO3 implements Action {
-  readonly type = ActionTypes.PageO3;
+export class Page03 implements Action {
+  readonly type = ActionTypes.Page03;
 }
