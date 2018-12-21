@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
-import {QuestionService} from '../../service/question.service';
+import {select, Store} from '@ngrx/store';
+import {Observable} from 'rxjs';
+import {User} from '../../model/user';
 
 @Component({
   selector: 'app-registration',
@@ -7,11 +9,9 @@ import {QuestionService} from '../../service/question.service';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent {
+  user$: Observable<User>;
 
-  questions: any[];
-
-  constructor(service: QuestionService) {
-    this.questions = service.getQuestions();
+  constructor(private store: Store<{ user: User }>) {
+    this.user$ = store.pipe(select('user'));
   }
-
 }

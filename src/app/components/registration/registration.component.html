@@ -1,4 +1,7 @@
-<div>
-  <h2>Registration</h2>
-  <app-dynamic-form [questions]="questions"></app-dynamic-form>
-</div>
+<div>User Registration
+  : {{ (user$ | async).firstName}} {{ (user$ | async).secondName}} {{ (user$ | async).lastName}}</div>
+<app-page01></app-page01>
+<br>
+<app-page02></app-page02>
+<br>
+<app-page03></app-page03>
