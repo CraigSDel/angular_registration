@@ -1,6 +1,5 @@
-<div>
-  <p>Last Name: {{ (user$ | async).lastName }}</p>
-</div>
-<label for="lastName"></label>
-<input id="lastName" name="lastName" [(ngModel)]="lastName" type="text">
+<label for="lastName">Last Name</label>
+<br>
+<input id="lastName" name="lastName" [(ngModel)]="user.lastName" type="text">
+<br>
 <button (click)="page03()">Save</button>

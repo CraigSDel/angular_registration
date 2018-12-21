@@ -11,16 +11,16 @@ import {Page02} from '../../../action/registration.actions';
 })
 export class Page02Component {
   user$: Observable<User>;
-
-  secondName: string;
+  user: User;
 
   constructor(private store: Store<{ user: User }>) {
     this.user$ = store.pipe(select('user'));
+    this.user$.subscribe(user => {
+      this.user = user;
+    });
   }
 
   page02() {
-    const user = new User();
-    user.secondName = this.secondName;
-    this.store.dispatch(new Page02(user));
+    this.store.dispatch(new Page02(new User()));
   }
 }

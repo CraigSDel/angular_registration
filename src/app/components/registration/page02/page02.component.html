@@ -1,6 +1,5 @@
-<div>
-  <p>Second Name: {{ (user$ | async).secondName }}</p>
-</div>
-<label for="middleName"></label>
-<input id="middleName" name="middleName" [(ngModel)]="secondName" type="text">
+<label for="secondName">Second Name</label>
+<br>
+<input id="secondName" name="middleName" [(ngModel)]="user.secondName" type="text">
+<br>
 <button (click)="page02()">Next</button>
