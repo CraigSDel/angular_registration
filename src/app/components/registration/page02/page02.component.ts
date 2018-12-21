@@ -12,14 +12,15 @@ import {Page02} from '../../../action/registration.actions';
 export class Page02Component {
   user$: Observable<User>;
 
-  middleName: string;
+  secondName: string;
 
   constructor(private store: Store<{ user: User }>) {
     this.user$ = store.pipe(select('user'));
   }
 
   page02() {
-    this.store.dispatch(new Page02());
+    const user = new User();
+    user.secondName = this.secondName;
+    this.store.dispatch(new Page02(user));
   }
-
 }

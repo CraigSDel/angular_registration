@@ -18,6 +18,8 @@ export class Page01Component {
   }
 
   page01() {
-    this.store.dispatch(new Page01());
+    const user = new User();
+    user.firstName = this.firstName;
+    this.store.dispatch(new Page01(user));
   }
 }
