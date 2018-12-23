@@ -21,6 +21,6 @@ export class Page01Component {
   }
 
   page01() {
-    this.store.dispatch(new Page01(new User()));
+    this.store.dispatch(new Page01(this.user));
   }
 }

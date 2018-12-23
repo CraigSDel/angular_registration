@@ -6,12 +6,18 @@ export const initialUser: User = new User();
 export function registrationReducer(state = initialUser, action: UserAction<User>) {
   switch (action.type) {
     case ActionTypes.Page01:
-      return new User(action.payload.firstName, state.secondName, state.lastName);
     case ActionTypes.Page02:
-      return new User(state.firstName, action.payload.secondName, state.lastName);
     case ActionTypes.Page03:
-      return new User(state.firstName, state.secondName, action.payload.lastName);
+      let user = new User();
+      user.firstName = action.payload.firstName;
+      user.secondName = action.payload.secondName;
+      user.lastName = action.payload.lastName;
+      user.addressOne = action.payload.addressOne;
+      user.addressTwo = action.payload.addressTwo;
+      user.comment = action.payload.comment;
+      return user;
     default:
       return state;
   }
+
 }
