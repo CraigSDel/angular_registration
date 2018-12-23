@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {Observable} from 'rxjs';
 import {select, Store} from '@ngrx/store';
 import {User} from '../../../model/user';
-import {Page03} from '../../../action/registration.actions';
+import {Page02, Page03} from '../../../action/registration.actions';
 
 @Component({
   selector: 'app-page03',
@@ -21,6 +21,10 @@ export class Page03Component {
   }
 
   page03() {
-    this.store.dispatch(new Page03(new User()));
+    this.store.dispatch(new Page03(this.user));
+  }
+
+  page02() {
+    this.store.dispatch(new Page02(this.user));
   }
 }
