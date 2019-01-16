@@ -1,4 +1,15 @@
-<div>User Registration</div>
+<div>User Registration :
+  {{(user$ | async).firstName}}
+  {{(user$ | async).secondName}}
+  {{(user$ | async).lastName}}
+  {{(user$ | async).addressOne.lineOne}}
+  {{(user$ | async).addressOne.lineTwo}}
+  {{(user$ | async).addressOne.lineThree}}
+  {{(user$ | async).addressTwo.lineOne}}
+  {{(user$ | async).addressTwo.lineTwo}}
+  {{(user$ | async).addressTwo.lineThree}}
+  {{(user$ | async).comment}}
+</div>
 <app-page01></app-page01>
 <br>
 <app-page02></app-page02>

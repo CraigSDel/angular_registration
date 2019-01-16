@@ -8,7 +8,7 @@ export function registrationReducer(state = initialUser, action: UserAction<User
     case ActionTypes.Page01:
     case ActionTypes.Page02:
     case ActionTypes.Page03:
-      let user = new User();
+      const user = new User();
       user.firstName = action.payload.firstName;
       user.secondName = action.payload.secondName;
       user.lastName = action.payload.lastName;
@@ -19,5 +19,4 @@ export function registrationReducer(state = initialUser, action: UserAction<User
     default:
       return state;
   }
-
 }
