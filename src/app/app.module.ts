@@ -10,6 +10,7 @@ import {Page03Component} from './components/registration/page03/page03.component
 import {Page02Component} from './components/registration/page02/page02.component';
 import {StoreModule} from '@ngrx/store';
 import {registrationReducer} from './reducer/registration.reducer';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {registrationReducer} from './reducer/registration.reducer';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    StoreModule.forRoot({user: registrationReducer})
+    StoreModule.forRoot({user: registrationReducer}),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
