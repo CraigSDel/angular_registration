@@ -12,8 +12,7 @@ import {StoreModule} from '@ngrx/store';
 import {registrationReducer} from './reducer/registration.reducer';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {DemoMaterialModule} from './module/demo-material/demo-material.module';
-import { RegistrationSaveComponent } from './components/registration/registration-save/registration-save.component';
-import { MenuComponent } from './components/menu/menu.component';
+import {RegistrationSaveComponent} from './components/registration/registration-save/registration-save.component';
 
 @NgModule({
   declarations: [
@@ -22,8 +21,7 @@ import { MenuComponent } from './components/menu/menu.component';
     Page01Component,
     Page02Component,
     Page03Component,
-    RegistrationSaveComponent,
-    MenuComponent
+    RegistrationSaveComponent
   ],
   imports: [
     AppRoutingModule,
