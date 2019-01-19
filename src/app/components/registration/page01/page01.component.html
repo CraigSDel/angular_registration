@@ -1,7 +1,16 @@
-<label for="firstName">First Name</label><br>
-<input id="firstName" name="firstName" [(ngModel)]="user.firstName" type="text"><br>
-<label for="secondName">Second Name</label><br>
-<input id="secondName" name="middleName" [(ngModel)]="user.secondName" type="text"><br>
-<label for="lastName">Last Name</label><br>
-<input id="lastName" name="lastName" [(ngModel)]="user.lastName" type="text"><br>
-<button (click)="page01()">Next</button>
+<div class="app-form">
+  <mat-form-field class="app-eighty-width">
+    <input matInput placeholder="First Name"
+           id="firstName" name="firstName" [(ngModel)]="user.firstName" type="text">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="app-eighty-width">
+    <input matInput placeholder="Second Name"
+           id="secondName" name="middleName" [(ngModel)]="user.secondName" type="text">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="app-eighty-width">
+    <input matInput placeholder="Last Name"
+           id="lastName" name="lastName" [(ngModel)]="user.lastName" type="text"><br>
+  </mat-form-field>
+</div>

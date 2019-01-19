@@ -19,12 +19,4 @@ export class Page03Component {
       this.user = user;
     });
   }
-
-  page03() {
-    this.store.dispatch(new Page03(this.user));
-  }
-
-  page02() {
-    this.store.dispatch(new Page02(this.user));
-  }
 }

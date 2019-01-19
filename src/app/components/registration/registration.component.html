@@ -1,17 +1,46 @@
-<div>User Registration :
-  {{(user$ | async).firstName}}
-  {{(user$ | async).secondName}}
-  {{(user$ | async).lastName}}
-  {{(user$ | async).addressOne.lineOne}}
-  {{(user$ | async).addressOne.lineTwo}}
-  {{(user$ | async).addressOne.lineThree}}
-  {{(user$ | async).addressTwo.lineOne}}
-  {{(user$ | async).addressTwo.lineTwo}}
-  {{(user$ | async).addressTwo.lineThree}}
-  {{(user$ | async).comment}}
+<div class="app-registration-container">
+  <section class="mat-typography">
+    <h1>User Registration</h1>
+  </section>
+  <mat-tab-group (selectedIndexChange)="selectedIndexChange($event)"
+                 [selectedIndex]="selectedIndex">
+    <mat-tab>
+      <ng-template mat-tab-label>
+        Page One
+      </ng-template>
+      <mat-card>
+        <app-page01></app-page01>
+        <mat-card-actions align="end">
+          <button mat-button (click)="page02()">Next</button>
+        </mat-card-actions>
+      </mat-card>
+      <br>
+    </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        Page Two
+      </ng-template>
+      <mat-card>
+        <app-page02></app-page02>
+        <br>
+        <mat-card-actions align="end">
+          <button mat-button (click)="page01()">Back</button>
+          <button mat-button (click)="page03()">Next</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        Page Three
+      </ng-template>
+      <mat-card>
+        <app-page03></app-page03>
+        <br>
+        <mat-card-actions align="end">
+          <button mat-button (click)="page02()">Back</button>
+          <button mat-button (click)="saveRegistration()">Save</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-tab>
+  </mat-tab-group>
 </div>
-<app-page01></app-page01>
-<br>
-<app-page02></app-page02>
-<br>
-<app-page03></app-page03>

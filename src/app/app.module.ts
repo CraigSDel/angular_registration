@@ -10,7 +10,9 @@ import {Page03Component} from './components/registration/page03/page03.component
 import {Page02Component} from './components/registration/page02/page02.component';
 import {StoreModule} from '@ngrx/store';
 import {registrationReducer} from './reducer/registration.reducer';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {DemoMaterialModule} from './module/demo-material/demo-material.module';
+import { RegistrationSaveComponent } from './components/registration/registration-save/registration-save.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +21,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     Page01Component,
     Page02Component,
     Page03Component,
+    RegistrationSaveComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    DemoMaterialModule,
     FormsModule,
-    StoreModule.forRoot({user: registrationReducer}),
-    BrowserAnimationsModule
+    StoreModule.forRoot({user: registrationReducer})
   ],
+  entryComponents: [RegistrationSaveComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

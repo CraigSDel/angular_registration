@@ -1,4 +1,6 @@
-<label for="comment">Comment</label><br>
-<input id="comment" name="comment" [(ngModel)]="user.comment" type="text"><br>
-<button (click)="page02()">Back</button>
-<button (click)="page03()">Save</button>
+<div class="app-form">
+  <mat-form-field class="app-eighty-width">
+    <input matInput placeholder="Comment"
+           id="comment" name="comment" [(ngModel)]="user.comment" type="text"><br>
+  </mat-form-field>
+</div>

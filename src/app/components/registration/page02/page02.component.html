@@ -1,10 +1,37 @@
-<label for="addressOneLineOne">Address One</label><br>
-<input id="addressOneLineOne" name="addressOneLineOne" [(ngModel)]="user.addressOne.lineOne" type="text"><br>
-<input id="addressOneLineTwo" name="addressOneLineTwo" [(ngModel)]="user.addressOne.lineTwo" type="text"><br>
-<input id="addressOneLineThree" name="addressOneLineThree" [(ngModel)]="user.addressOne.lineThree" type="text"><br>
-<label for="addressTwoLineOne">Address One</label><br>
-<input id="addressTwoLineOne" name="addressTwoLineOne" [(ngModel)]="user.addressTwo.lineOne" type="text"><br>
-<input id="addressTwoLineTwo" name="addressTwoLineTwo" [(ngModel)]="user.addressTwo.lineTwo" type="text"><br>
-<input id="addressTwoLineThree" name="addressTwoLineThree" [(ngModel)]="user.addressTwo.lineThree" type="text"><br>
-<button (click)="page01()">Back</button>
-<button (click)="page02()">Next</button>
+<div class="app-form">
+  <label for="addressOneLineOne">Address One</label><br>
+  <br>
+  <mat-form-field class="app-eighty-width">
+    <input matInput placeholder="Number / Unit & Complex"
+           id="addressOneLineOne" name="addressOneLineOne" [(ngModel)]="user.addressOne.lineOne" type="text"><br>
+  </mat-form-field>
+  <br>
+  <mat-form-field class="app-eighty-width">
+    <input matInput placeholder="Street"
+           id="addressOneLineTwo" name="addressOneLineTwo" [(ngModel)]="user.addressOne.lineTwo" type="text"><br>
+  </mat-form-field>
+  <br>
+  <mat-form-field class="app-eighty-width">
+    <input matInput placeholder="Suburb & City"
+           id="addressOneLineThree" name="addressOneLineThree" [(ngModel)]="user.addressOne.lineThree"
+           type="text"><br>
+  </mat-form-field>
+  <br>
+  <label for="addressTwoLineOne">Address Two</label><br>
+  <br>
+  <mat-form-field class="app-eighty-width">
+    <input matInput placeholder="Number / Unit & Complex"
+           id="addressTwoLineOne" name="addressTwoLineOne" [(ngModel)]="user.addressTwo.lineOne" type="text"><br>
+  </mat-form-field>
+  <br>
+  <mat-form-field class="app-eighty-width">
+    <input matInput placeholder="Street"
+           id="addressTwoLineTwo" name="addressTwoLineTwo" [(ngModel)]="user.addressTwo.lineTwo" type="text"><br>
+  </mat-form-field>
+  <br>
+  <mat-form-field class="app-eighty-width">
+    <input matInput placeholder="Suburb & City"
+           id="addressTwoLineThree" name="adressTwoLineThree" [(ngModel)]="user.addressTwo.lineThree"
+           type="text"><br>
+  </mat-form-field>
+</div>
