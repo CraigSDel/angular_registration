@@ -1,5 +1,5 @@
 .app-registration-container {
   margin: auto;
-  width: 40%;
+  max-width: 38em;
   padding: 10px;
 }
