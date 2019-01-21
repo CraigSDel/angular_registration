@@ -11,8 +11,8 @@ import {Page02Component} from './components/registration/page02/page02.component
 import {StoreModule} from '@ngrx/store';
 import {registrationReducer} from './reducer/registration.reducer';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {DemoMaterialModule} from './module/demo-material/demo-material.module';
 import {RegistrationSubmitComponent} from './components/registration/registration-submit/registration-submit.component';
+import {AppAngularMaterialModule} from './module/app-angular-material/app-angular-material.module';
 
 @NgModule({
   declarations: [
@@ -24,10 +24,10 @@ import {RegistrationSubmitComponent} from './components/registration/registratio
     RegistrationSubmitComponent
   ],
   imports: [
+    AppAngularMaterialModule,
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
-    DemoMaterialModule,
     FormsModule,
     StoreModule.forRoot({user: registrationReducer})
   ],
@@ -35,5 +35,4 @@ import {RegistrationSubmitComponent} from './components/registration/registratio
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule {}

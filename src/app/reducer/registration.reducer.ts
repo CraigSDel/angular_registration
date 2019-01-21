@@ -10,11 +10,11 @@ export function registrationReducer(state = initialUser, action: UserAction<User
     case ActionTypes.Page03:
       const user = new User();
       user.firstName = action.payload.firstName;
-      user.secondName = action.payload.secondName;
+      user.cellNumber = action.payload.cellNumber;
       user.lastName = action.payload.lastName;
-      user.addressOne = action.payload.addressOne;
-      user.addressTwo = action.payload.addressTwo;
-      user.comment = action.payload.comment;
+      user.physicalAddress = action.payload.physicalAddress;
+      user.postalAddress = action.payload.postalAddress;
+      user.comments = action.payload.comments;
       return user;
     case ActionTypes.Submit:
       return new User();

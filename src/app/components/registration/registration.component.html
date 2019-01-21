@@ -6,23 +6,26 @@
                  [selectedIndex]="selectedIndex">
     <mat-tab>
       <ng-template mat-tab-label>
-        Page One
+        Details
       </ng-template>
+      <br>
       <app-page01></app-page01>
       <button (click)="page02()" class="app-button-right" mat-button>Next</button>
     </mat-tab>
     <mat-tab>
       <ng-template mat-tab-label>
-        Page Two
+        Addresses
       </ng-template>
+      <br>
       <app-page02></app-page02>
       <button (click)="page01()" class="app-button-left" mat-button>Back</button>
       <button (click)="page03()" class="app-button-right" mat-button>Next</button>
     </mat-tab>
     <mat-tab>
       <ng-template mat-tab-label>
-        Page Three
+        Comments
       </ng-template>
+      <br>
       <app-page03></app-page03>
       <button (click)="page02()" class="app-button-left" mat-button>Back</button>
       <button (click)="submitRegistration()" class="app-button-right" mat-button>Submit</button>

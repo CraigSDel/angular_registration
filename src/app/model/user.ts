@@ -1,43 +1,45 @@
-import {Address} from "./address";
+import {Address} from './address';
 
 export class User {
-  constructor(firstName?: string, middleName?: string, lastName?: string, addressOne?: Address, addressTwo?: Address, comment?: string) {
+  constructor(firstName?: string, lastName?: string, cellNumber?: string,
+              physicalAddress?: Address, postalAddress?: Address,
+              comment?: string) {
     this._firstName = firstName;
-    this._secondName = middleName;
     this._lastName = lastName;
-    this._addressOne = addressOne ? null : new Address();
-    this._addressTwo = addressTwo ? null : new Address();
-    this._comment = comment;
+    this._cellNumber = cellNumber;
+    this._physicalAddress = physicalAddress ? null : new Address();
+    this._postalAddress = postalAddress ? null : new Address();
+    this._comments = comment;
   }
 
-  private _comment: string;
+  private _comments: string;
 
-  get comment(): string {
-    return this._comment;
+  get comments(): string {
+    return this._comments;
   }
 
-  set comment(value: string) {
-    this._comment = value;
+  set comments(value: string) {
+    this._comments = value;
   }
 
-  private _addressOne: Address;
+  private _physicalAddress: Address;
 
-  get addressOne(): Address {
-    return this._addressOne;
+  get physicalAddress(): Address {
+    return this._physicalAddress;
   }
 
-  set addressOne(value: Address) {
-    this._addressOne = value;
+  set physicalAddress(value: Address) {
+    this._physicalAddress = value;
   }
 
-  private _addressTwo: Address;
+  private _postalAddress: Address;
 
-  get addressTwo(): Address {
-    return this._addressTwo;
+  get postalAddress(): Address {
+    return this._postalAddress;
   }
 
-  set addressTwo(value: Address) {
-    this._addressTwo = value;
+  set postalAddress(value: Address) {
+    this._postalAddress = value;
   }
 
   private _firstName: string;
@@ -50,14 +52,14 @@ export class User {
     this._firstName = value;
   }
 
-  private _secondName: string;
+  private _cellNumber: string;
 
-  get secondName(): string {
-    return this._secondName;
+  get cellNumber(): string {
+    return this._cellNumber;
   }
 
-  set secondName(value: string) {
-    this._secondName = value;
+  set cellNumber(value: string) {
+    this._cellNumber = value;
   }
 
   private _lastName: string;
