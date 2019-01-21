@@ -3,7 +3,7 @@ import {select, Store} from '@ngrx/store';
 import {Observable} from 'rxjs';
 import {User} from '../../model/user';
 import {MatSnackBar} from '@angular/material';
-import {RegistrationSaveComponent} from './registration-save/registration-save.component';
+import {RegistrationSubmitComponent} from './registration-submit/registration-submit.component';
 
 @Component({
   selector: 'app-registration',
@@ -31,8 +31,8 @@ export class RegistrationComponent {
     this.selectedIndex = 2;
   }
 
-  saveRegistration() {
-    this.snackBar.openFromComponent(RegistrationSaveComponent, {
+  submitRegistration() {
+    this.snackBar.openFromComponent(RegistrationSubmitComponent, {
       duration: 500,
     });
   }

@@ -25,6 +25,7 @@
         <br>
         <mat-card-actions align="end">
           <button mat-button (click)="page01()">Back</button>
+          <div fxFlex></div>
           <button mat-button (click)="page03()">Next</button>
         </mat-card-actions>
       </mat-card>
@@ -38,7 +39,8 @@
         <br>
         <mat-card-actions align="end">
           <button mat-button (click)="page02()">Back</button>
-          <button mat-button (click)="saveRegistration()">Save</button>
+          <div fxFlex></div>
+          <button (click)="submitRegistration()" mat-button>Submit</button>
         </mat-card-actions>
       </mat-card>
     </mat-tab>
