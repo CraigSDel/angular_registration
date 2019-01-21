@@ -5,6 +5,7 @@ export enum ActionTypes {
   Page01 = '[Registration Component] Page01',
   Page02 = '[Registration Component] Page02',
   Page03 = '[Registration Component] Page03',
+  Submit = '[Registration Component] Submit',
 }
 
 export interface UserAction<T> extends Action {
@@ -32,6 +33,15 @@ export class Page02 implements UserAction<User> {
 
 export class Page03 implements UserAction<User> {
   readonly type = ActionTypes.Page03;
+  readonly payload: User;
+
+  constructor(payload: User) {
+    this.payload = payload;
+  }
+}
+
+export class Submit implements UserAction<User> {
+  readonly type = ActionTypes.Submit;
   readonly payload: User;
 
   constructor(payload: User) {

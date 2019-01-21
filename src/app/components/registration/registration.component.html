@@ -8,41 +8,24 @@
       <ng-template mat-tab-label>
         Page One
       </ng-template>
-      <mat-card>
-        <app-page01></app-page01>
-        <mat-card-actions align="end">
-          <button mat-button (click)="page02()">Next</button>
-        </mat-card-actions>
-      </mat-card>
-      <br>
+      <app-page01></app-page01>
+      <button (click)="page02()" class="app-button-right" mat-button>Next</button>
     </mat-tab>
     <mat-tab>
       <ng-template mat-tab-label>
         Page Two
       </ng-template>
-      <mat-card>
-        <app-page02></app-page02>
-        <br>
-        <mat-card-actions align="end">
-          <button mat-button (click)="page01()">Back</button>
-          <div fxFlex></div>
-          <button mat-button (click)="page03()">Next</button>
-        </mat-card-actions>
-      </mat-card>
+      <app-page02></app-page02>
+      <button (click)="page01()" class="app-button-left" mat-button>Back</button>
+      <button (click)="page03()" class="app-button-right" mat-button>Next</button>
     </mat-tab>
     <mat-tab>
       <ng-template mat-tab-label>
         Page Three
       </ng-template>
-      <mat-card>
-        <app-page03></app-page03>
-        <br>
-        <mat-card-actions align="end">
-          <button mat-button (click)="page02()">Back</button>
-          <div fxFlex></div>
-          <button (click)="submitRegistration()" mat-button>Submit</button>
-        </mat-card-actions>
-      </mat-card>
+      <app-page03></app-page03>
+      <button (click)="page02()" class="app-button-left" mat-button>Back</button>
+      <button (click)="submitRegistration()" class="app-button-right" mat-button>Submit</button>
     </mat-tab>
   </mat-tab-group>
 </div>

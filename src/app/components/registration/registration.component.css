@@ -3,3 +3,11 @@
   max-width: 38em;
   padding: 10px;
 }
+
+.app-button-left {
+  float: left;
+}
+
+.app-button-right {
+  float: right;
+}

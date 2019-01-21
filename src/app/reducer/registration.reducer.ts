@@ -16,6 +16,8 @@ export function registrationReducer(state = initialUser, action: UserAction<User
       user.addressTwo = action.payload.addressTwo;
       user.comment = action.payload.comment;
       return user;
+    case ActionTypes.Submit:
+      return new User();
     default:
       return state;
   }
