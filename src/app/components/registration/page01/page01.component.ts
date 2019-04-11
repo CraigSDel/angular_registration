@@ -2,7 +2,6 @@ import {Component} from '@angular/core';
 import {Observable} from 'rxjs';
 import {select, Store} from '@ngrx/store';
 import {User} from '../../../model/user';
-import {Page01} from '../../../action/registration.actions';
 
 @Component({
   selector: 'app-page01',

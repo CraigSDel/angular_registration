@@ -11,7 +11,7 @@ import {Page02Component} from './components/registration/page02/page02.component
 import {StoreModule} from '@ngrx/store';
 import {registrationReducer} from './reducer/registration.reducer';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {RegistrationSubmitComponent} from './components/registration/registration-submit/registration-submit.component';
+import {SnackbarSubmitComponent} from './components/snackbar-submit/snackbar-submit.component';
 import {AppAngularMaterialModule} from './module/app-angular-material/app-angular-material.module';
 
 @NgModule({
@@ -21,7 +21,7 @@ import {AppAngularMaterialModule} from './module/app-angular-material/app-angula
     Page01Component,
     Page02Component,
     Page03Component,
-    RegistrationSubmitComponent
+    SnackbarSubmitComponent
   ],
   imports: [
     AppAngularMaterialModule,
@@ -31,7 +31,7 @@ import {AppAngularMaterialModule} from './module/app-angular-material/app-angula
     FormsModule,
     StoreModule.forRoot({user: registrationReducer})
   ],
-  entryComponents: [RegistrationSubmitComponent],
+  entryComponents: [SnackbarSubmitComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

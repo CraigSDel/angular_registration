@@ -3,7 +3,7 @@ import {select, Store} from '@ngrx/store';
 import {Observable} from 'rxjs';
 import {User} from '../../model/user';
 import {MatSnackBar} from '@angular/material';
-import {RegistrationSubmitComponent} from './registration-submit/registration-submit.component';
+import {SnackbarSubmitComponent} from '../snackbar-submit/snackbar-submit.component';
 import {Submit} from '../../action/registration.actions';
 
 @Component({
@@ -24,20 +24,16 @@ export class RegistrationComponent {
     this.selectedIndex = 0;
   }
 
-  page01() {
-    this.selectedIndex = 0;
+  next() {
+    this.selectedIndex = this.selectedIndex + 1;
   }
 
-  page02() {
-    this.selectedIndex = 1;
+  back() {
+    this.selectedIndex = this.selectedIndex - 1;
   }
 
-  page03() {
-    this.selectedIndex = 2;
-  }
-
-  submitRegistration() {
-    this.snackBar.openFromComponent(RegistrationSubmitComponent, {
+  submit() {
+    this.snackBar.openFromComponent(SnackbarSubmitComponent, {
       duration: 500,
     });
     this.selectedIndex = 0;
